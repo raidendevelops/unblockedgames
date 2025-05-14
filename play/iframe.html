@@ -1,0 +1,8 @@
+<iframe id='iframe' width='100%; height='100%'>
+
+
+<script>
+              const urlParams = new URLSearchParams(window.location.search);
+            const val = urlParams.get('url');
+    document.getElementById('iframe').src = `${val}`
+</script>
