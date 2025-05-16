@@ -3,5 +3,5 @@
 <script>
   const urlParams = new URLSearchParams(window.location.search);
   const val = urlParams.get('url');
-  document.getElementById('iframe').src = val;
+  document.getElementById('iframe').src = atob(val);
 </script>
