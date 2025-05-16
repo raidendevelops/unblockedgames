@@ -19,7 +19,7 @@
             <div class="game_title"><input placeholder="Search" id="search" class="search" onkeyup="search_it()" type="search"><select id="tags" class="button" onclick="search_it()"><option value="all">All</option><option value="pop">Popular</option><option value="two">Two Player</option><option value="stream">Streaming</option><option value="bad">Bad Games</option></select></div>
             <h2 class="animated jello game_title">All Games:</h2>
             <a id="Suggestions" class="link" href="./play/iframe?url=https://forms.gle/FbVznWhATmVc4rqQ7" target="_blank"><span class="bar"></span><img src="./icons/one.webp" alt="game"><b>Submit more games!</b></a>
-             <a id="RL2D" class="link pop" href="./play/iframe.html?url=https://script.google.com/macros/s/AKfycbzxpyljaqvmqRShvfh_XpN8ZRRpLRCeYHZ0V-9ZoC4wf0pFHWFfgQQM-o1o-Q7pc3qAwg/exec" target="_blank"><span class="bar"></span><img src="./icons/1v1.webp"><b>Rocket League 2D</b>  <span class="badge"><i class="fa-solid fa-star"></i> POPULAR</span><span class="badge"></a>
+             <a id="RL2D" class="link pop" onclick='l("https://script.google.com/macros/s/AKfycbzxpyljaqvmqRShvfh_XpN8ZRRpLRCeYHZ0V-9ZoC4wf0pFHWFfgQQM-o1o-Q7pc3qAwg/exec")' target="_blank"><span class="bar"></span><img src="./icons/1v1.webp"><b>Rocket League 2D</b>  <span class="badge"><i class="fa-solid fa-star"></i> POPULAR</span><span class="badge"></a>
             <a id="1 (2048 game)" class="link" href="./play/1/" target="_blank"><span class="bar"></span><img src="./icons/one.webp" alt="1 (2048 game)"><b>1 (2048 game)</b></a>
             <a id="100 Player Pong" class="glink" href="./play/100-player-pong/" target="_blank"><span class="bar"></span><img src="./icons/100pong.webp"><b>100 Player Pong</b></a>
             <a id="10 Minutes Till Dawn" class="link" href="./play/10-minutes-till-dawn/" target="_blank"><span class="bar"></span><img src="./icons/10m.webp"><b>10 Minutes Till Dawn</b></a>
@@ -193,12 +193,13 @@
             <a id="IST" class="link pop" href="./play/iframe.html?url=https://ubgwtf.gitlab.io/idle-startup-tycoon/" target="_blank"><span class="bar"></span><img src="./icons/zoro.webp"><b>Idle Startup Tycoon</b><span class="badge"><i class="fa-solid fa-file-video"></i> POPULAR</span></a>
             <a id="GMR" class="link pop" href="./play/iframe.html?url=https://ubgwtf.gitlab.io/gp-moto-racing/" target="_blank"><span class="bar"></span><img src="./icons/zoro.webp"><b>GP Moto Racing</b><span class="badge"><i class="fa-solid fa-file-video"></i> POPULAR</span></a>
             <a id="Heroball" class="link" href="./play/iframe.html?url=https://ubgwtf.gitlab.io/heroball-adventures/" target="_blank"><span class="bar"></span><img src="./icons/zoro.webp"><b>Heroball Adventures</b></a>
-            <a id="BasketNiggers" class="link" href=`./play/iframe.html?url=${btoa("https://basketbros.gitlab.io/file/")}` target="_blank"><span class="bar"></span><img src="./icons/zoro.webp"><b>BasketBROS</b></a>
+            <a id="BasketNiggers" class="link" onclick='l("https://basketbros.gitlab.io/file")' target="_blank"><span class="bar"></span><img src="./icons/zoro.webp"><b>BasketBROS</b></a>
         </div>
         </div>
         </div>
 
         <script>
+            let v5 = btoa
             function search_it() {
                 var tag = document.getElementById("tags").value
                 var what_search = document.getElementById("search").value
@@ -252,6 +253,11 @@
                     search_it();
                 }
             })
+
+            function l(v0) {
+                let v1 = v5(v0);
+                window.location.href = v1;
+            };
 
         </script>
     </body>
